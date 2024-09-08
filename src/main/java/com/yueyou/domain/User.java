@@ -28,7 +28,7 @@ public class User implements Serializable {
     /**
     * 用户`名称
     */
-    @ApiModelProperty("用户`名称")
+    @ApiModelProperty("用户名称")
     private String username;
     /**
     * 账号
@@ -86,5 +86,14 @@ public class User implements Serializable {
     @ApiModelProperty("用户角色 0 - 普通用户 1 - 管理员")
     private Integer userrole;
 
+    public User(String username, String useraccount, String avatarurl, Integer gender, String phone, String email, String tags) {
+        this.username = username;
+        this.useraccount = useraccount;
+        this.avatarurl = avatarurl;
+        this.gender = gender;
+        this.phone = phone;
+        this.email = email;
+        this.tags = tags;
+    }
 
 }

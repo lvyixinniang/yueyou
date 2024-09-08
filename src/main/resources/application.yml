@@ -13,14 +13,24 @@ spring:
     url: jdbc:mysql://localhost:3306/yueyou
     username: root
     password: X1y1y1@d1m1w1
+  redis:
+    port: 6379
+    database: 0
+    host: 192.168.195.128
+
 mybatis-plus:
   global-config:
     db-config:
       logic-delete-field: isDelete
       logic-delete-value: 1
       logic-not-delete-value: 0
+  configuration:
+#    MP 的日志
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  #      失效时间 时间错 (分钟)
   session:
     timeout: 86400
+    store-type: redis
     # 使用logback.xml来配置日志
     logging:
       config=classpath: logback.xml

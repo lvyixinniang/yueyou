@@ -14,7 +14,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2WebMvc;
 
 @Configuration
 @EnableSwagger2WebMvc
-@Profile("dev")
+@Profile("prod")
 public class SwaggerConfig {
 
     @Bean(value = "defaultApi2")
